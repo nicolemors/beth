@@ -58,7 +58,7 @@ body {
 
  body {
    background: var(--base-background);
-   color: var(--grey);
+   color: var(--dark-grey);
    margin: 0;
    font-family: var(--font-family-default);
    -webkit-font-smoothing: antialiased;

@@ -16,11 +16,19 @@
   font-family: var(--font-family-display);
   font-weight: normal;
   font-size: calc(var(--font-size-md) * 1.13rem);
+  line-height: var(--line-height-xl);
+  padding: calc(var(--space-xl) * 4rem) 0;
+}
+
+.intro {
+  font-size: var(--font-size-md);
   line-height: var(--line-height-lg);
-  text-align: center;
-  padding: calc(var(--space-xl) * 6rem) 0;
 }
 
 .navigation-item-link {
   padding: var(--space-lg);
+}
+
+.blurb-image {
+  max-width: 14rem;
 }

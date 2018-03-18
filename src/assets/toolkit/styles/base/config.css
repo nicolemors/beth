@@ -160,6 +160,15 @@
 
 }
 
+/**
+ * Selectors
+ */
+
+@custom-selector :--headings h1, h2, h3, h4, h5, h6;
+@custom-selector :--lists ul, ol, dl;
+@custom-selector :--monospaced pre, code, kbd, samp, var;
+@custom-selector :--enter :hover, :focus;
+
 @custom-media --xs-viewport (max-width:25rem); /* < 400px */
 @custom-media --sm-viewport (min-width:25rem); /* 400px */
 @custom-media --smd-max-viewport (max-width:37.5rem); /* < 600px */

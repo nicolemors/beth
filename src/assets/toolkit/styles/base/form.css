@@ -1,0 +1,47 @@
+/**
+ * @define input
+ */
+
+ :root {
+   --input-border-color: var(--white);
+   --input-border: solid var(--border-width-md) var(--input-border-color);
+ }
+
+ .input {
+   display: block;
+   box-sizing: border-box;
+   width: 100%;
+   height: 2.5rem;
+   padding: calc(var(--space-xs) / 1.8rem);
+   font-size: var(--font-size-xs);
+   text-transform: uppercase;
+   line-height: 1em;
+   color: var(--white);
+   border: var(--input-border);
+   background: transparent;
+
+   transition-duration: var(--motion-duration-sm);
+   transition-property: background-color, border-color, color;
+   transition-timing-function: var(--motion-timing-fuction-default);
+
+   -webkit-appearance: none;
+
+   &:matches(:active, :hover) {
+     border-color: var(--green);
+   }
+
+   &:matches(:disabled, .is-disabled) {
+     color: color(var(--dark-green) a(50%));
+     border-color: var(--input-border-color);
+   }
+
+   &:focus {
+     border-color: var(--green);
+     background-color: color(var(--white) a(20%));
+     outline: none;
+   }
+ }
+
+ .textarea {
+   height: 6.5rem;
+ }

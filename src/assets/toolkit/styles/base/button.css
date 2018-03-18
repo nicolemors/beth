@@ -1,0 +1,142 @@
+/**
+ * @define button
+ * Styles for all buttons, modifiers, and states.
+ */
+:root {
+  --button-border-color: color(var(--green) shade(20%));
+  --button-border: solid var(--border-width-lg) var(--button-border-color);
+  --button-background-color: var(--green);
+}
+
+/**
+* 1. Normalize `box-sizing` across all elements that this component could be
+*    applied to.
+* 2. Corrects inability to style clickable `input` types in iOS.
+* 3. Prevent button text from being selectable.
+* 4. Make sure `input` will wrap text across multiple lines.
+*/
+
+.button {
+  display: inline-block;
+  box-sizing: border-box; /* 1 */
+  padding: calc(var(--space-xs) * 1.4rem);
+  appearance: none; /* 2 */
+
+  border-bottom: var(--button-border);
+
+  background: var(--button-background-color);
+  color: var(--white);
+
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  line-height: 1em;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1.2;
+
+  cursor: pointer;
+  user-select: none; /* 3 */
+  vertical-align: middle;
+  white-space: normal; /* 4 */
+
+  transition-duration: var(--motion-duration-sm);
+  transition-property: background-color, border-color, color;
+  transition-timing-function: var(--motion-timing-fuction-default);
+
+  /**
+  * Remove excess padding and border in Firefox 4+
+  */
+
+  &:-moz-focus-inner {
+    padding: 0;
+    border: 0;
+  }
+
+  /**
+  * UI states
+  */
+
+  &:hover {
+    background-color: color(var(--green) shade(30%));
+    color: var(--white);
+    border-color: color(var(--green) shade(45%));
+    text-decoration: none;
+  }
+
+  &:active,
+  &:focus {
+    text-decoration: none;
+  }
+
+  /**
+   * Hide default focus ring. For some reason in Chrome this only works if it's
+   * specifically on the focus state.
+  */
+
+  &:focus {
+    outline: none;
+  }
+}
+
+/**
+ * Modifier: dark green buttons
+ */
+
+:root {
+  --button-dark-background-color: var(--dark-green);
+}
+
+.button--dark {
+  background-color: var(--button-dark-background-color);
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: color(var(--button-dark-background-color) shade(85%));
+    text-decoration: none;
+  }
+}
+
+/**
+* Modifier: dark grey buttons
+*/
+
+.button--grey {
+  background-color: var(--dark-grey);
+  border-color: color(var(--dark-grey) shade(70%));
+
+  &:hover,
+  &:active,
+  &:focus {
+   background-color: color(var(--dark-grey) shade(85%));
+   text-decoration: none;
+ }
+}
+
+ /**
+ * Modifier: link buttons
+ * Gives the clickable area of a button with the appearance of a link
+ */
+
+.button--link {
+   background-color: transparent;
+   border: none;
+   color: var(--link-color);
+
+   &:hover,
+   &:active,
+   &:focus {
+      color: var(--link-hover-color);
+   }
+ }
+
+ /**
+ * UI State: Disabled buttons for all types of buttons
+ */
+
+.button:disabled, .is-disabled {
+  opacity: var(--opacity-mid);
+  cursor: default;
+  pointer-events: none;
+}
