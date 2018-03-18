@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html class="{{htmlclass}}">
+  <head>
+    {{#block "head"}}
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      {{#if title}}
+        <title>{{title}}</title>
+      {{else if name}}
+        <title>{{name}}</title>
+      {{else}}
+        <title>{{title}}</title>
+      {{/if}}
+      {{#each styles}}
+        <link rel="stylesheet" href="{{@root.baseurl}}/assets/toolkit/styles/{{this}}.css">
+      {{/each}}
+    {{/block}}
+    <link rel="stylesheet" href="{{@root.baseurl}}/assets/toolkit/styles/toolkit.css">
+    <script src="https://use.typekit.net/lnz2csx.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+  </head>
+  <body class="{{bodyclass}}">
+    {{#block "body"}}
+
+      {{#block "main"}}
+
+      {{/block}}
+    {{/block}}
+    {{#block "foot"}}
+    
+    {{/block}}
+  </body>
+</html>

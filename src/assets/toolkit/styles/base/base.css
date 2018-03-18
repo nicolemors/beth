@@ -1,0 +1,115 @@
+/**
+ * Squash additional UA styles
+ */
+
+
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+pre {
+   margin: 0;
+}
+
+fieldset {
+   border: 0;
+   margin: 0;
+   padding: 0;
+}
+
+ol,
+ul {
+   margin: 0;
+   list-style: none;
+   padding: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+th {
+  text-align: left;
+}
+
+
+/**
+ * Restrict horizontal scrolling
+ *
+ * Necessary evil for using 100vw with visible scrollbars
+ * !!!!Temp disabling this as it doesn't play well with production!!!!
+ */
+
+html,
+body {
+  /*overflow-x: hidden;*/
+}
+
+/**
+ * Base body styles
+ */
+
+ body {
+   background: var(--base-background);
+   color: var(--grey);
+   margin: 0;
+   font-family: var(--font-family-default);
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+ }
+
+ /**
+  * Base body styles
+  */
+
+a {
+  color: var(--link-color);
+  text-decoration-skip: ink;
+  text-decoration: none;
+}
+
+a:hover, a:active, a:focus {
+  color: var(--link-hover-color);
+  text-decoration: underline;
+}
+
+button {
+  border: none;
+  font-family: var(--font-family-default);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-normal);
+  background: none;
+  color: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+/**
+ * Code
+ */
+
+pre {
+  overflow: auto;
+}
+
+*:not(pre, a) > code {
+  color: var(--white);
+  font-weight: var(--font-weight-normal);
+  background-color: var(--dark-grey);
+  border-radius: var(--border-radius-sm);
+}
+
+/**
+ * Embeds
+ */
+
+img {
+  max-width: 100%;
+}

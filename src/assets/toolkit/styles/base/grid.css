@@ -1,0 +1,129 @@
+/* grid component based on:
+* https://github.com/suitcss/components-grid
+* Dependent on suitcss size for responsive sizing.
+*/
+
+/** @define grid */
+
+:root {
+  --grid-gutter-size: var(--space-lg);
+}
+
+/**
+ * Core grid component
+ *
+ * DO NOT apply dimension or offset utilities to the `grid` element. All cell
+ * widths and offsets should be applied to child grid cells.
+ */
+
+/* grid container
+   ========================================================================== */
+
+/**
+ * All content must be contained within child `grid-cell` elements.
+ *
+ * 1. Account for browser defaults of elements that might be the root node of
+ *    the component.
+ */
+
+.grid {
+  box-sizing: border-box;
+  display: flex; /* 1 */
+  flex-flow: row wrap;
+  margin: 0; /* 1 */
+  padding: 0; /* 1 */
+}
+
+/**
+ * Modifier: center align all grid cells
+ */
+
+.grid--align-center {
+  justify-content: center;
+}
+
+/**
+ * Modifier: right align all grid cells
+ */
+
+.grid--align-right {
+  justify-content: flex-end;
+}
+
+/**
+ * Modifier: middle-align grid cells
+ */
+
+.grid--align-middle {
+  align-items: center;
+}
+
+/**
+ * Modifier: bottom-align grid cells
+ */
+
+.grid--align-bottom {
+  align-items: flex-end;
+}
+
+/**
+ * Modifier: allow cells to equal distribute width
+ *
+ * 1. Provide all values to avoid IE10 bug with shorthand flex
+ *    http://git.io/vllC7
+ *
+ *    Use `0%` to avoid bug in IE10/11 with unitless flex basis
+ *    http://git.io/vllWx
+ */
+
+.grid--fit > .grid-cell {
+  flex: 1 1 0%; /* 1 */
+}
+
+/**
+ * Modifier: all cells match height of tallest cell in a row
+ */
+
+.grid--equal-height > .grid-cell {
+  display: flex;
+}
+
+/**
+ * Modifier: gutters
+ */
+
+.grid--with-gutter {
+  margin: 0 calc(-0.5 * var(--grid-gutter-size));
+}
+
+.grid--with-gutter > .grid-cell {
+  padding: 0 calc(0.5 * var(--grid-gutter-size));
+}
+
+/* grid cell
+   ========================================================================== */
+
+/**
+ * No explicit width by default. Rely on combining `grid-cell` with a dimension
+ * utility or a component class that extends 'grid'.
+ *
+ * 1. Set flex items to full width by default
+ * 2. Fix issue where elements with overflow extend past the
+ *    `grid-cell` container - https://git.io/vw5oF
+ */
+
+.grid-cell {
+  box-sizing: inherit;
+  flex-basis: 100%; /* 1 */
+  min-width: 0; /* 2 */
+}
+
+/**
+ * Modifier: horizontally center one unit
+ * Set a specific unit to be horizontally centered. Doesnt affect
+ * any other units. Can still contain a child `grid` object.
+ */
+
+.grid-cell--center {
+  margin: 0 auto;
+}

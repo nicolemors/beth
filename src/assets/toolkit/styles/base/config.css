@@ -1,0 +1,172 @@
+@import "css-modularscale";
+
+@use postcss-cssnext;
+@use postcss-inline-svg;
+
+
+:root {
+  /* http://www.modularscale.com/?1&em&1.25&web&text */
+  --ms-ratio: var(--major-second);
+  --ms-base: 1rem;
+}
+
+/**
+ * Typography
+ */
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i');
+
+:root {
+  --font-size-xs: calc(var(--ms-2) * 1rem);
+  --font-size-sm: calc(var(--ms0) * 1rem);
+  --font-size-md: calc(var(--ms2) * 1rem);
+  --font-size-lg: calc(var(--ms4) * 1rem);
+  --font-size-xl: calc(var(--ms5) * 1rem);
+
+  --font-family-default: 'Montserrat', Helvetica, Arial, sans-serif;
+  --font-family-mono: Consolas, "Lucida Console", "Liberation Mono", "Courier New", monospace, sans-serif;
+  --font-family-display: gastromond, sans-serif;
+
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+
+
+  --line-height-xs: var(--ms2);
+  --line-height-sm: var(--ms3);
+  --line-height-md: var(--ms4);
+  --line-height-lg: var(--ms5);
+  --line-height-xl: var(--ms6);
+
+  --heading-font: var(--font-weight-bold) var(--font-size-lg) var(--font-family-default);
+  --code-font: var(--font-size-sm) var(--font-family-mono);
+}
+
+
+/**
+* Colors
+*/
+
+:root {
+  --green: #9ACDBB;
+  --dark-green: #639E8A;
+  --grey: #869294;
+  --dark-grey: #39474E;
+  --light-grey: #C6C7CB;
+  --white: #fff;
+  --black: #111;
+  --silver: #F4F4F4;
+  --dark-silver: #EEEEEE;
+}
+
+/**
+ * Color Placeholders
+ *
+ * These are used as defaults in place of actual colors.
+ *
+ * 1. Represents an "absense" of color
+ * 2. Represents a current or inherited color
+ */
+:root {
+
+--color-null: transparent; /* 1 */
+--color-relative: currentColor; /* 2 */
+
+/* Opacity */
+
+--opacity-lower: 0.125;
+--opacity-low: 0.25;
+--opacity-mid: 0.5;
+--opacity-high: 0.75;
+
+/* Shades */
+
+--shade-lower: rgba(var(--black), 0.125);
+--shade-low: rgba(var(--black), 0.25);
+--shade-mid: rgba(var(--black), 0.5);
+--shade-high: rgba(var(--black), 0.75);
+
+/* Spacing */
+--space-xs: calc(var(--ms-3) / 1rem);
+--space-sm: calc(var(--ms-2) / 1rem);
+--space-md: calc(var(--ms-1) / 1rem);
+--space-lg: calc(var(--ms1) * 1rem);
+--space-xl: calc(var(--ms2) * 1rem);
+--space-xxl: calc(var(--ms5) * 1rem);
+
+/* Content */
+
+--content-dash-em: "—";
+--content-single-quote-open: "‘";
+--content-single-quote-close: "’";
+--content-double-quote-open: "“";
+--content-double-quote-close: "”";
+
+/* Base */
+
+--base-background: var(--white);
+--base-color: var(--black);
+--base-margin: var(--space-md);
+
+/* Links */
+
+--link-color: var(--green);
+--link-hover-color: var(--dark-green);
+
+/* Lists */
+
+--list-style-default: disc;
+--list-style-numeric: decimal;
+--list-marker-padding: var(--space-lg);
+
+/* Motion */
+
+--motion-duration-sm: 100ms;
+--motion-duration-md: 180ms;
+--motion-duration-lg: 300ms;
+--motion-timing-fuction-default: ease;
+
+/* Border */
+
+--border-width-sm: 1px;
+--border-width-md: 2px;
+--border-width-lg: 3px;
+
+--border-radius-xs: 2px;
+--border-radius-sm: 3px;
+--border-radius-md: 6px;
+--border-radius-lg: 20px;
+--border-radius-circle: 50%;
+
+/* Rules */
+
+--rule-color: var(--grey);
+--rule-style: solid;
+--rule-width-sm: var(--border-width-sm);
+--rule-width-md: var(--border-width-md);
+
+/* Shadow */
+--shadow-sm: rgba(0,0,0,.2) 0 1px 3px;
+--shadow-md: rgba(0,0,0,0.2) 0 1px 3px;
+--shadow-lg: rgba(0,0,0,.1) 0 4px 12px;
+
+/* Component */
+
+--control-stroke: var(--border-width-md);
+--control-line: var(--border-width-sm);
+--control-radius: var(--border-radius-md);
+--control-background-color: var(--color-null);
+--control-border-color: var(--color-relative);
+--control-disabled-opacity: var(--opacity-mid);
+
+}
+
+@custom-media --xs-viewport (max-width:25rem); /* < 400px */
+@custom-media --sm-viewport (min-width:25rem); /* 400px */
+@custom-media --smd-max-viewport (max-width:37.5rem); /* < 600px */
+@custom-media --smd-viewport (min-width:37.5rem); /* 600px */
+@custom-media --md-max-viewport (max-width:43.75rem); /* < 700px */
+@custom-media --md-viewport (min-width:43.75rem); /* 700px */
+@custom-media --lg-max-viewport (max-width:61.25rem); /* < 980px */
+@custom-media --lg-viewport (min-width:61.25rem); /* 980px */
+@custom-media --xl-max-viewport (max-width:81.25rem); /* < 1300px */
+@custom-media --xl-viewport (min-width:81.25rem); /* 1300px */

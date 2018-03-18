@@ -1,0 +1,207 @@
+/**
+ * Body type styles
+ *
+ * 1. Allow long words (links) to brake at arbitrary points
+ * 2. Prevent automatic size adjustments on orientation change
+ */
+
+body {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-sm);
+  font-family: var(--font-family-default);
+  word-wrap: break-word; /* 1 */
+  text-size-adjust: none; /* 2 */
+}
+
+/**
+* Headings
+*/
+
+h1, h2, h3, h4, h5, h6 {
+  font: var(--heading-font);
+  text-rendering:optimizelegibility;
+  -webkit-font-smoothing:antialiased;
+}
+
+h1 {
+  font-size: var(--font-size-xl);
+}
+
+h2 {
+  font-size: var(--font-size-lg);
+}
+
+h3 {
+  font-size: var(--font-size-md);
+}
+
+h4 {
+  font-size: var(--font-size-sm);
+}
+
+h5 {
+  font-size: var(--font-size-xs);
+}
+
+h6 {
+  font-size: var(--font-size-xs);
+  text-transform: uppercase;
+  color: var(--grey);
+}
+
+/**
+ * Small text
+ */
+
+small {
+  font-size: var(--font-size-xs);
+}
+
+/**
+ * Small caps
+ * http://typeplate.com/#small-caps
+ */
+
+abbr {
+  font-variant: small-caps;
+  text-align: uppercase;
+}
+
+/**
+ * Remove hyphenation from elements with significant formatting
+ */
+
+abbr,
+blockquote,
+code,
+kbd,
+q,
+samp,
+var {
+  hyphens: none;
+}
+
+/**
+ * Use custom monospace font on all code-like elements
+ */
+
+pre,
+code,
+kbd,
+samp,
+var {
+  font: var(--code-font);
+}
+
+/**
+ * Control whitespace and wrapping on code blocks
+ */
+
+pre,
+code {
+  white-space: pre;
+  line-height: var(--line-height-xs);
+}
+
+code {
+  word-wrap: normal;
+}
+
+/**
+ * Lists
+ */
+
+ul,
+ol,
+dl {
+  list-style-position: outside;
+}
+
+ol,
+ul {
+  padding: 0 0 0 var(--list-marker-padding);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-md);
+}
+
+ul {
+  list-style-type: var(--list-style-default);
+}
+
+ol {
+  list-style-type: var(--list-style-numeric);
+}
+
+/**
+ * Description Lists
+ */
+dt {
+  float: left;
+  clear: left;
+  text-align: right;
+  font-weight: var(--font-weight-bold);
+  padding: var(--space-xs);
+}
+
+dd {
+  padding: var(--space-xs);
+}
+
+dl:after {
+  content:"";
+  display:table;
+  clear:both;
+}
+
+/**
+ * Horizontal rule
+ */
+
+hr {
+  height: var(--border-width-md);
+  min-height: var(--border-width-sm);
+  border-style: none;
+  background-color: var(--color-relative);
+  opacity: var(--opacity-lower);
+}
+
+/**
+ * Blockquote
+ *
+ * Assumes markup to be:
+ *
+ * <blockquote>
+ *   <p>The movie was awesome</p>
+ *   <footer>
+ *     <cite>Some Person</cite>
+ *   </footer>
+ * </blockquote>
+ *
+ * http://html5doctor.com/cite-and-blockquote-reloaded/
+ */
+
+blockquote {
+  padding-left: var(--space-md);
+  font-style: italic;
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-lg);
+}
+
+blockquote p {
+  margin-bottom: var(--base-margin);
+}
+
+blockquote :matches(p:last-of-type, footer) {
+  display: block;
+}
+
+blockquote cite {
+  font-style: normal;
+}
+
+/**
+ * Precede citation with em dash and non-breaking space.
+ */
+ blockquote cite::before {
+   content: "—\00a0";
+ }
