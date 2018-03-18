@@ -23,7 +23,7 @@
     "url": "https://github.com/cloudfour/drizzle.git"
   },
   "engines": {
-    "node": ">=4.0.0"
+    "node": ">=8.10.0"
   },
   "devDependencies": {
     "@cloudfour/gulp-tasks": "^2.0.1",
