@@ -3,22 +3,8 @@ title: Homepage
 layout: page
 ---
 
-
-<div class="u-flex u-flex-align-items-center u-flex-col">
-  <img class="logo" src="/logo.png">
-  <h1 class="title">Beth Bogdon<span class="u-text-shrink-2 u-space-left-02">LPC</span></h1>
-</div>
-
-<div class="u-flex u-flex-justify-center u-space-03">
-  <ul class="u-list-inline">
-    <li><a class="nav-menu-item">Approach</a></li>
-    <li><a class="nav-menu-item">Background</a></li>
-    <li><a class="nav-menu-item">Trainings</a></li>
-    <li><a class="nav-menu-item">Rates & Insurance</a></li>
-    <li><a class="nav-menu-item">Contact</a></li>
-  </ul>
-</div>
-
+{{> patterns.components.header.header}}
+{{> patterns.components.navigation.nav}}
 <div class="quote" style="margin-top:-2px;">
   <div class="grid grid--align-center">
     <div class="grid-cell u-size-9of12 u-lg-size-8of12">
@@ -57,27 +43,4 @@ layout: page
   </div>
 </div>
 
-<div class="u-bg-dark-green u-white u-pad-6">
-  <div class="grid grid--align-center">
-    <div class="grid-cell u-size-4of12 u-after-2of12">
-      <h4 class="u-text-grow-3 u-text-normal u-space-bottom-2">OFFICE</h4>
-      <p>2225 NE Martin Luther King Jr. Blvd. #207</p>
-      <p class="u-space-bottom-2">Portland OR, 97212</p>
-      <a class="u-white" href="tel:1-971-347-9591">(971) 347-9591</a>
-      <div class="u-space-top-2">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2794.541444879006!2d-122.66409584904243!3d45.53943253633904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5495a7493bee56ef%3A0xa39c8d53f540958d!2s2225+NE+Martin+Luther+King+Jr+Blvd%2C+Portland%2C+OR+97212!5e0!3m2!1sen!2sus!4v1521407278290" width="100%" height="400" frameborder="0" style="border:0"></iframe>
-      </div>
-    </div>
-    <div class="grid-cell u-size5of12">
-      <h4 class="u-text-grow-3 u-text-normal u-space-bottom-2">CONTACT</h4>
-      <form class="u-space-items-2">
-        <input class="input" type="text" placeholder="Name">
-        <input class="input" type="text" placeholder="Email">
-        <textarea class="input textarea" type="text" placeholder="Message"></textarea>
-        <a class="button u-size-full">Submit</a>
-      </form>
-
-
-    </div>
-  </div>
-</div>
+{{> patterns.components.footer.footer}}
