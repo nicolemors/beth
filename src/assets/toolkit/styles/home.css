@@ -20,11 +20,6 @@
   padding: calc(var(--space-xl) * 4rem) 0;
 }
 
-.intro {
-  font-size: var(--font-size-md);
-  line-height: var(--line-height-lg);
-}
-
 .navigation-item-link {
   padding: var(--space-lg);
 }
