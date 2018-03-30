@@ -18,6 +18,11 @@
   font-size: calc(var(--font-size-md) * 1.13rem);
   line-height: var(--line-height-xl);
   padding: calc(var(--space-xl) * 4rem) 0;
+  background-image: url("/sketchy-edge.png");
+  background-repeat: no-repeat;
+  background-position: 0px 285px;
+  background-size: contain;
+  height: 300px;
 }
 
 .navigation-item-link {
