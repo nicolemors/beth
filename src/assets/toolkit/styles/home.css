@@ -17,37 +17,21 @@
   font-weight: normal;
   font-size: calc(var(--font-size-md) * 1.13rem);
   line-height: var(--line-height-xl);
-  padding: calc(var(--space-xl) * 4rem) 0;
-  background-image: url("/sketchy-edge.png");
-  background-repeat: no-repeat;
-  background-position: 0px 285px;
-  background-size: contain;
-  height: 300px;
 }
 
 .navigation-item-link {
   padding: var(--space-lg);
 }
 
-.blurbs {
-  background: var(--dark-grey);
-  color: var(--white);
-}
-
-.blurb-top {
-  background-image: url("/sketchy-edge.png");
-  background-repeat: no-repeat;
-  background-position: 0px -15px;
-  background-size: contain;
-}
-
-.blurb-bottom {
-  background-image: url("/sketchy-edge.png");
-  background-repeat: no-repeat;
-  background-position: 0px 290px;
-  background-size: contain;
-}
-
 .blurb-image {
   max-width: 14rem;
+}
+
+.sketchy-edge-top {
+  rotate: 180deg;
+  vertical-align: top;
+}
+
+.sketchy-edge-bottom {
+  vertical-align: bottom;
 }
