@@ -29,6 +29,25 @@
   padding: var(--space-lg);
 }
 
+.blurbs {
+  background: var(--dark-grey);
+  color: var(--white);
+}
+
+.blurb-top {
+  background-image: url("/sketchy-edge.png");
+  background-repeat: no-repeat;
+  background-position: 0px -15px;
+  background-size: contain;
+}
+
+.blurb-bottom {
+  background-image: url("/sketchy-edge.png");
+  background-repeat: no-repeat;
+  background-position: 0px 290px;
+  background-size: contain;
+}
+
 .blurb-image {
   max-width: 14rem;
 }
