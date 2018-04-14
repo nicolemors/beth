@@ -1,13 +1,25 @@
 
 .title {
-  font-size: calc(var(--font-size-xl) * 2rem);
+  font-size: var(--font-size-xl);
   font-weight: normal;
   color: var(--dark-grey);
   font-family: var(--font-family-display);
 }
 
+@media (--md-viewport) {
+  .title {
+    font-size: calc(var(--font-size-xl) * 2rem);
+  }
+}
+
 .logo {
-  max-width: 16rem;
+  max-width: 10rem;
+}
+
+@media (--md-viewport) {
+  .logo {
+    max-width: 16rem;
+  }
 }
 
 .quote {
@@ -20,10 +32,6 @@
 
 .navigation-item-link {
   padding: var(--space-lg);
-}
-
-.blurb-image {
-  max-width: 12rem;
 }
 
 .sketchy-edge-top {
