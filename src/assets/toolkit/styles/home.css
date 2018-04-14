@@ -34,6 +34,10 @@
   padding: var(--space-lg);
 }
 
+.blurb-image {
+  max-width: 12rem;
+}
+
 .sketchy-edge-top {
   rotate: 180deg;
   vertical-align: top;
